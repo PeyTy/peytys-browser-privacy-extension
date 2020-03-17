@@ -1,5 +1,7 @@
 # Browser Privacy Extension
 
+![Pussy with firethrower](iconic.png?raw=true)
+
 ### Hopefully improves your privacy
 
 I have no idea how it may be useful for you,
