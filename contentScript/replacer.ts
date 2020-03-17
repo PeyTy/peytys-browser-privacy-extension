@@ -156,10 +156,10 @@ namespace replacer {
 				}
 
 				// Pretend like this is not a laptop
-				setAlways(BatteryManager.prototype, "charging", true)
-				setAlways(BatteryManager.prototype, "chargingTime", 0)
-				setAlways(BatteryManager.prototype, "dischargingTime", Infinity)
-				setAlways(BatteryManager.prototype, "level", 1)
+				if ((window as any).BatteryManager != null) setAlways(BatteryManager.prototype, "charging", true)
+				if ((window as any).BatteryManager != null) setAlways(BatteryManager.prototype, "chargingTime", 0)
+				if ((window as any).BatteryManager != null) setAlways(BatteryManager.prototype, "dischargingTime", Infinity)
+				if ((window as any).BatteryManager != null) setAlways(BatteryManager.prototype, "level", 1)
 
 				// Geolocation
 
@@ -434,9 +434,11 @@ namespace replacer {
 
 				let userAgent = window.navigator.userAgent.toString()
 				let appVersion = (window.navigator.appVersion || '').toString()
+				let oscpu: string | undefined = window.navigator.oscpu
 				const newSourceValue = profile.agent || "Windows NT 6.1;"
 				userAgent = userAgent.replace(/Windows NT [0123456789\.]+;/, newSourceValue);
 				appVersion = appVersion.replace(/Windows NT [0123456789\.]+;/, newSourceValue);
+				if (oscpu) oscpu = oscpu.replace(/Windows NT [0123456789\.]+;/, newSourceValue);
 
 				// "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36"
 				Object.defineProperty(window.navigator, 'userAgent', {
@@ -448,6 +450,12 @@ namespace replacer {
 				Object.defineProperty(window.navigator, 'appVersion', {
 					get: function() {
 						return appVersion
+					}
+				});
+
+				if (oscpu) Object.defineProperty(window.navigator, 'oscpu', {
+					get: function() {
+						return oscpu
 					}
 				});
 

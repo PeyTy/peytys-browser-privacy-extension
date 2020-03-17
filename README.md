@@ -2,7 +2,6 @@
 
 ![Pussy with firethrower](kitty.png?raw=true)
 
-
 ### Screenshots
 
 ![Profiles](profiles.png?raw=true)
@@ -69,4 +68,3 @@ yarn global add typescript
 ```
 
 Call `build.bat` or do the same it does from unix terminal.
-
