@@ -1,0 +1,45 @@
+{
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "version": "1.0.0",
+  "permissions": [
+    "storage",
+    "notifications",
+    "privacy",
+    "http://*/*",
+    "https://*/*",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs"
+  ],
+  "options_page": "html/options.html",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "background":
+  {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "content_scripts": [
+  {
+    "run_at": "document_start",
+    "matches": ["*://*/*"],
+    "js": ["js/contentScript.js"],
+    "all_frames": true
+  }],
+  "icons":
+  {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "browser_action":
+  {
+    "default_icon": "images/16.png",
+    "default_title": "Browser Privacy Extension",
+    "default_popup": "index.html"
+  },
+  "content_security_policy": "script-src 'self' 'sha256-J2nhn0wNbAavrcsRxHEXPCMNTI0/YQmJ3CDAwIn9CdM='; object-src 'self'"
+}
