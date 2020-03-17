@@ -30,7 +30,13 @@ by https://github.com/Valve/fingerprintjs2
 
 ### How to use
 
+Download
+[latest release .zip](https://github.com/PeyTy/peytys-browser-privacy-extension/releases)
+and uncompress
+
 Use `chrome://extensions/` -> `Developer mode` -> `Load unpacked`
+
+![How to devmode](devmode.png?raw=true)
 
 ### Features
 
