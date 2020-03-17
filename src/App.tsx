@@ -242,7 +242,7 @@ function App() {
 							<div className="input-group-prepend">
 								<span className="input-group-text">#{selectedProfile.id}</span>
 							</div>
-							<input type="text" className="form-control" id="textName" maxLength={30} placeholder="My profile" value={selectedProfile.name} onChange={e => changeName(e.target.value, selectedProfile)} required/>
+							<input type="text" className="form-control" id="textName" maxLength={90} placeholder="My profile" value={selectedProfile.name} onChange={e => changeName(e.target.value, selectedProfile)} required/>
 							<div className="invalid-feedback" style={{width: "100%"}}>
 								Profile name is required.
 							</div>
