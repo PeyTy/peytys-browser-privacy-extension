@@ -2,6 +2,13 @@
 
 ![Pussy with firethrower](kitty.png?raw=true)
 
+
+### Screenshots
+
+![Profiles](profiles.png?raw=true)
+
+![Features](features.png?raw=true)
+
 ### Hopefully improves your privacy
 
 I have no idea how it may be useful for you,
