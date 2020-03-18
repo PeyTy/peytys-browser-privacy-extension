@@ -28,7 +28,11 @@ and https://fingerprintjs.com/demo
 (you need to clear cookies & local storage of this site to see difference)
 by https://github.com/Valve/fingerprintjs2
 
-### How to use
+### How to use on Firefox
+
+[Available at addons.mozilla.org/addon/peyty-s-browser-privacy](https://addons.mozilla.org/addon/peyty-s-browser-privacy/)
+
+### How to use on Chrome
 
 Download
 [latest release .zip](https://github.com/PeyTy/peytys-browser-privacy-extension/releases)
