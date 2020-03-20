@@ -143,7 +143,8 @@ function App() {
 
 	function changeName(value: string, selectedProfile: Profile) {
 		selectedProfile.name = value
-		chrome.storage.local.set({ profiles: profiles }, () => {
+		setProfiles(profiles.slice()) // Have to do this so caret don't jump
+		chrome.storage.local.set({ profiles: profiles, profile: selectedProfile }, () => {
 			setProfiles(profiles.slice()) // Force react update
 		})
 	}
@@ -209,7 +210,7 @@ function App() {
 							const current = profile.id == selectedProfile.id
 
 							return (
-								<li className={"list-group-item d-flex justify-content-between " + (current && 'bg-light' || 'lh-condensed')}>
+								<li key={profile.id} className={"list-group-item d-flex justify-content-between " + (current && 'bg-light' || 'lh-condensed')}>
 									<div className={current && 'text-success' || ''}>
 										<h6 className="my-0">{profile.name.trim()}</h6>
 										<small className="text-muted">
