@@ -309,7 +309,7 @@ function App() {
 					</li>
 				</ul>
 				<p className="mb-1">&copy; 2020 PeyTy</p>
-				<p className="py-1 mb-1"><a href="https://www.patreon.com/PeyTy" className="hellur" title="https://www.patreon.com/PeyTy" onClick={() => chrome.tabs.create({url: "https://www.patreon.com/PeyTy" })}>Support me on Patreon</a></p>
+				<p className="py-1 mb-1"><a href="https://www.patreon.com/PeyTy" className="hellur" title="https://www.patreon.com/PeyTy" onClick={e => { chrome.tabs.create({url: "https://www.patreon.com/PeyTy" }); e.preventDefault() }}>Support me on Patreon</a></p>
 			</footer>
 		</>
 	);
