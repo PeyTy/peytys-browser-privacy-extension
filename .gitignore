@@ -59,3 +59,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 public/js/contentScript.js
+peytys-*
+*.zip
