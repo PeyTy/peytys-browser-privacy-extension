@@ -283,11 +283,13 @@ namespace replacer {
 
 				// Add some noise to the image
 				// It is common to use fillText for fingerprinting
+				let showNotificationDone = false
 				function overloadCanvasRenderingContext2D(root: typeof CanvasRenderingContext2D) {
-					showNotification();
 					(window as any).$$_fillText_ = (window as any).$$_fillText_ || root.prototype.fillText;
 					Object.defineProperty(root.prototype, "fillText", {
 						value: function() {
+							if (!showNotificationDone) showNotification();
+							showNotificationDone = true
 							const alpha = this.globalAlpha
 							const argument = arguments[0]
 
@@ -308,7 +310,6 @@ namespace replacer {
 				const slight = (((((rgba + 1.0) * 0.5) + 1.0) * 0.5 + 1.0) * 0.5 + 1.0) * 0.5
 
 				function overloadElement(root: typeof Element) {
-					showNotification();
 					(window as any).$$_getClientRects_ = (window as any).$$_getClientRects_ || root.prototype.getClientRects
 					Object.defineProperty(root.prototype, "getClientRects", {
 						value: function() {
