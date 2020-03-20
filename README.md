@@ -1,6 +1,6 @@
 # Browser Privacy Extension
 
-![Pussy with firethrower](kitty.png?raw=true)
+![Great new logo](fire.png?raw=true)
 
 ### Screenshots
 
