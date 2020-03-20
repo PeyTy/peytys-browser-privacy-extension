@@ -249,7 +249,7 @@ function App() {
 							</div>
 						</div>
 					</div>
-					<h6 className="mb-3">Geolocation</h6>
+					<h6 className="mb-3">Geolocation (GPS)</h6>
 					<div className="row">
 						<div className="col-md-6 mb-3 half">
 							<label htmlFor="latitude">Latitude</label>
