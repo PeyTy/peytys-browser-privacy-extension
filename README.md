@@ -65,6 +65,8 @@ Use `chrome://extensions/` -> `Developer mode` -> `Load unpacked`
 - Options to enable/disable by feature
 - Time zones
 - Hide funcs with `function () { [native code] }`
+- Override display languages
+- Dark theme
 
 [Support me on Patreon for more features!](https://www.patreon.com/PeyTy)
 
