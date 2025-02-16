@@ -82,3 +82,7 @@ yarn global add typescript
 ```
 
 Call `build.bat` or do the same it does from unix terminal.
+
+### Rules
+
+This is a [Vanguard Source](https://github.com/GreenteaOS/.github/blob/kawaii/CODE_OF_CONDUCT.md#clasic-open-source-vs-vanguard-source-models) as it is related to privacy issues and people's lives depending on it.
