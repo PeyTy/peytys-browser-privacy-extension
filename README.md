@@ -21,6 +21,8 @@ Canvas protection technique was based on Canvas Defender extension. Other ones
 I made by trial and error by myself.
 I'm very proud of my WebGL and fonts replacement tech - it's insane!
 
+🔥 [**Join our Discord!**](https://discord.gg/kyEPrDqMQH)
+
 ### Test
 
 I test on https://browserleaks.com
