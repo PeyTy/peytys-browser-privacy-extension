@@ -32,15 +32,25 @@ function generateProfile(name: string, profiles: Profile[]): Profile {
 		// Avoid collisions
 		if (profile.id == id) id = generateId()
 	}
+	let latlng = generateRandomLatLng()
 	return {
 		name: name,
 		id: id,
-		latitude: 40.730610,
-		longitude: -73.935242,
+		latitude: latlng.lat,
+		longitude: latlng.lng,
 		agent: "Windows NT 6.1;",
 		gpu: "-1",
 	}
 }
+
+function generateRandomLatLng() {
+	const lat = (Math.random() * 180) - 90; // generate a random latitude between -90 and 90
+	const lng = (Math.random() * 360) - 180; // generate a random longitude between -180 and 180
+	return {
+	  lat: parseFloat(lat.toFixed(6)),
+	  lng: parseFloat(lng.toFixed(6))
+	};
+  }
 
 function getProfile(id: string, profiles: Profile[]): Profile | undefined {
 	for (const profile of profiles) {
